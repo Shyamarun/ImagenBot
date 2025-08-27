@@ -1,6 +1,4 @@
 streamlit
-langchain
-langchain-community
 requests
 json
 os
