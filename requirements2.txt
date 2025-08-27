@@ -1,0 +1,9 @@
+streamlit
+langchain
+langchain-community
+requests
+json
+os
+langchain.memory
+ConversationBufferMemory
+time
