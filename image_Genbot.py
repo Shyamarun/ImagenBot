@@ -5,7 +5,8 @@ import json
 from langchain.memory import ConversationBufferMemory
 import time
 
-SAVE_DIR = "sessions"import streamlit as st
+SAVE_DIR = "sessions"
+import streamlit as st
 import requests
 import os
 import json
