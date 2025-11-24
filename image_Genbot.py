@@ -2,7 +2,21 @@ import streamlit as st
 import requests
 import os
 import json
-from langchain.memory import ConversationBufferMemory
+# Try multiple import paths for ConversationBufferMemory across LangChain versions
+try:
+    from langchain.memory import ConversationBufferMemory
+except Exception:
+    try:
+        from langchain.memory.buffer import ConversationBufferMemory
+    except Exception:
+        try:
+            from langchain.chains.conversation.memory import ConversationBufferMemory
+        except Exception as e:
+            raise ImportError(
+                "Could not import ConversationBufferMemory from langchain. "
+                "Install a compatible langchain version or update imports. "
+                f"Original error: {e}"
+            )
 import time
 import base64
 
